@@ -31,11 +31,7 @@ def run
      @salesman = routeTaken[1]
      @path << @salesman
      @cities.delete(routeTaken[1])
-    #  p 'cities left: '+@cities.to_s
      @totalDistance += distance(routeTaken)
-    #  p 'route taken: ' + routeTaken.to_s
-    #  p 'salesman location: '+@salesman.to_s
-    # p 'totalDistance: ' + @totalDistance.to_s
   end
 
   for y in 0..@cities.length-1
@@ -46,7 +42,6 @@ def run
 
   p @totalRoute
   if @trial.include? @totalDistance
-    # puts 'already found that path'
   else
     @trial << @totalDistance
   end
